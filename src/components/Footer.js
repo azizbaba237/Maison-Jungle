@@ -26,7 +26,7 @@ function Footer() {
           name="inputValue"
           type="email"
           onChange={handleInput}
-        //   onBlur={handleBlur}
+          onBlur={handleBlur}
         />
       </footer>
     </div>

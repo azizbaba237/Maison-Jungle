@@ -1,4 +1,13 @@
 import monstera from '../assets/monstera.jpg'
+import lyrata from '../assets/lyrata.jpg'
+import pothos from '../assets/pothos.jpg'
+import succulent from '../assets/succulent.jpg'
+import olivier from '../assets/olivier.jpg'
+import mint from '../assets/mint.jpg'
+import basil from '../assets/basil.jpg'
+
+
+
 export const plantList = [
 	{
 		name: 'monstera',
@@ -7,7 +16,8 @@ export const plantList = [
 		isBestSale: true,
 		light: 2,
 		water: 3,
-		cover: monstera
+		cover: monstera,
+		price: 10
 	},
 	{
 		name: 'ficus lyrata',
@@ -15,7 +25,8 @@ export const plantList = [
 		id: '2ab',
 		light: 3,
 		water: 1,
-		cover: monstera
+		cover: lyrata,
+		price: 15
 	},
 	{
 		name: 'pothos argenté',
@@ -23,7 +34,8 @@ export const plantList = [
 		id: '3sd',
 		light: 1,
 		water: 2,
-		cover: monstera
+		cover: pothos,
+		price: 6
 	},
 	{
 		name: 'yucca',
@@ -31,7 +43,8 @@ export const plantList = [
 		id: '4kk',
 		light: 3,
 		water: 1,
-		cover: monstera
+		cover: succulent,
+		price:22
 	},
 	{
 		name: 'olivier',
@@ -39,7 +52,8 @@ export const plantList = [
 		id: '5pl',
 		light: 3,
 		water: 1,
-		cover: monstera
+		cover: olivier,
+		price: 9
 	},
 	{
 		name: 'géranium',
@@ -47,7 +61,8 @@ export const plantList = [
 		id: '6uo',
 		light: 2,
 		water: 2,
-		cover: monstera
+		cover: mint,
+		price: 40
 	},
 	{
 		name: 'basilique',
@@ -56,7 +71,8 @@ export const plantList = [
 		isBestSale: true,
 		light: 2,
 		water: 3,
-		cover: monstera
+		cover: basil,
+		price: 17
 	},
 	{
 		name: 'aloe',
@@ -64,6 +80,7 @@ export const plantList = [
 		id: '8fp',
 		light: 2,
 		water: 1,
-		cover: monstera
+		cover: monstera,
+		price: 13
 	}
 ]

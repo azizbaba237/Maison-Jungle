@@ -1,9 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
-function Cart() {
-  const [cart, setCart] = useState(0);
-  const [isOpen, setIsOpen] = useState(false);
-  const monsteraPrice = 8;
+function Cart({ cart, setCart }) {
+  const [isOpen, setIsOpen] = useState(true);
+  const total = cart.reduce(
+    (acc, plantType) => acc + plantType.amount * plantType.price,
+    0
+  );
+
+  useEffect(() => {
+    document.title = `LMJ : ${total}€ d'achat`;
+  }, [total]);
 
   return isOpen ? (
     <div className=" color-white bg-[#31b572] p-6 flex flex-col justify-start w-96">
@@ -13,14 +19,26 @@ function Cart() {
       >
         Fermer
       </button>
-      <h2 className="text-white mb-2 ">Panier</h2>
-      <div className="">
-        Monstera : {monsteraPrice}€
-        <h3>Total = {monsteraPrice * cart}€</h3>
-      </div>
-      <button className="bg-white rounded-lg ">
-        Vider le panier
-      </button>
+      {cart.length > 0 ? (
+        <div>
+          <h2 className="text-white mb-2 font-semibold">Panier</h2>
+          <div className="flex flex-col justify-center items-center">
+          <ul className=" text-white font-normal capitalize ">
+            {cart.map(({ name, price, amount }, index) => (
+              <div key={`${name} - ${index}`}>
+                {name} {price}€ x {amount}
+              </div>
+            ))}
+          </ul>
+          </div>
+          <h3 className="m-6 text-white font-semibold">Total : {total}€</h3>
+          <div className="bg-white rounded-lg px-2 flex justify-center items-center ">
+            <button onClick={() => setCart([])}>Vider le panier</button>
+          </div>
+        </div>
+      ) : (
+        <div>Votre panier est vide </div>
+      )}
     </div>
   ) : (
     <div className="=w-[600px] cursor-pointer">
