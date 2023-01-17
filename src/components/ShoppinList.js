@@ -45,7 +45,12 @@ function ShoppinList({ cart, setCart }) {
                 light={light}
                 price={price}
               />
-              <button onClick={() => addToCart(name, price)} className="bg-slate-200 px-1.5 rounded mb-2 ml-3">Ajouter</button>
+              <button
+                onClick={() => addToCart(name, price)}
+                className="bg-slate-200 px-1.5 rounded mb-2 ml-3"
+              >
+                Ajouter
+              </button>
             </div>
           ) : null
         )}

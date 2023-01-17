@@ -1,9 +1,10 @@
 import React from 'react'
+import All from '../components/All'
 
 function Home() {
   return (
    <>
-  <h1> Homepage</h1>
+      <All/>
    </>
   )
 }

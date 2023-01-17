@@ -23,13 +23,13 @@ function Cart({ cart, setCart }) {
         <div>
           <h2 className="text-white mb-2 font-semibold">Panier</h2>
           <div className="flex flex-col justify-center items-center">
-          <ul className=" text-white font-normal capitalize ">
-            {cart.map(({ name, price, amount }, index) => (
-              <div key={`${name} - ${index}`}>
-                {name} {price}€ x {amount}
-              </div>
-            ))}
-          </ul>
+            <ul className=" text-white font-normal capitalize ">
+              {cart.map(({ name, price, amount }, index) => (
+                <div key={`${name} - ${index}`}>
+                  {name} {price}€ x {amount}
+                </div>
+              ))}
+            </ul>
           </div>
           <h3 className="m-6 text-white font-semibold">Total : {total}€</h3>
           <div className="bg-white rounded-lg px-2 flex justify-center items-center ">
