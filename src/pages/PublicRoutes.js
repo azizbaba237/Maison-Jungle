@@ -6,7 +6,8 @@ import Contact from "../pages/Contact";
 import Layout from "./Layout";
 import AuthGuard from "../auth/AuthGuard";
 import Login from "../auth/Login";
-import DashBoard from "./admin/DashBoard";
+import SideBarDashBoardAdmin from "./admin/SideBarDashBoardAdmin";
+import Users from "./admin/Users";
 
 function PublicRoutes() {
   return (
@@ -17,7 +18,8 @@ function PublicRoutes() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/dashboard" element={<AuthGuard><DashBoard /></AuthGuard>} />
+          <Route path="/dashboard" element={<AuthGuard><SideBarDashBoardAdmin/></AuthGuard>} />
+          <Route path="/user" element={<Users/>} />
         </Route>
       </Routes>
     </div>
